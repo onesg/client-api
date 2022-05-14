@@ -31,9 +31,9 @@ public class ClientApiApplication {
 		/* Método mais atual */
 		return args -> {
 			Client client = Client.builder().
-					nameClient("").
-					cpfClient("").
-					dateRegisterClient(LocalDate.of(2022, 06, 14)).
+					nameClient("Jheniffer").
+					cpfClient("9999999999").
+					//dateRegisterClient(LocalDate.of(2022, 06, 14)).
 					build();
 			repository.save(client);
 		};

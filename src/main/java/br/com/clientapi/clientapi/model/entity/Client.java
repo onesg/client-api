@@ -25,4 +25,9 @@ public class Client {
     @Column(name = "date_register_client", nullable = false)
     private LocalDate dateRegisterClient;
 
+    @PrePersist
+    public void prePersist(){
+        this.setDateRegisterClient(LocalDate.now());
+    }
+
 }
