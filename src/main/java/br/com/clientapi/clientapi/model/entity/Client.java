@@ -1,5 +1,6 @@
 package br.com.clientapi.clientapi.model.entity;
 
+import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -7,6 +8,7 @@ import java.time.LocalDate;
 
 @Entity
 @Data
+@Builder
 public class Client {
 
     @Id
