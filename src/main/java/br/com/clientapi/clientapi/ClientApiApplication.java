@@ -14,31 +14,30 @@ import java.time.LocalDate;
 public class ClientApiApplication {
 
 	/* @Bean Será executado assim que o projeto for startado. */
-	@Bean
-	public CommandLineRunner run(@Autowired ClientRepository repository){
-
-		/* Método padrão */
-		/*
-		return args -> {
-			Client client = new Client();
-			client.setNameClient("Tiago");
-			client.setCpfClient("123456789");
-			client.setDateRegisterClient(LocalDate.of(2022, 05, 9));
-			repository.save(client);
-		};
-		*/
-
-		/* Método mais atual */
-		return args -> {
-			Client client = Client.builder().
-					nameClient("Jheniffer").
-					cpfClient("9999999999").
-					//dateRegisterClient(LocalDate.of(2022, 06, 14)).
-					build();
-			repository.save(client);
-		};
-
-	}
+//	@Bean
+//	public CommandLineRunner run(@Autowired ClientRepository repository){
+//
+//		/* Método padrão */
+////		return args -> {
+////			Client client = new Client();
+////			client.setNameClient("Tiago");
+////			client.setCpfClient("123456789");
+////			client.setDateRegisterClient(LocalDate.of(2022, 05, 9));
+////			repository.save(client);
+////		};
+//
+//
+//		/* Método mais atual */
+//		return args -> {
+//			Client client = Client.builder().
+//					nameClient("Jheniffer").
+//					cpfClient("9999999999").
+//					//dateRegisterClient(LocalDate.of(2022, 06, 14)).
+//					build();
+//			repository.save(client);
+//		};
+//
+//	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(ClientApiApplication.class, args);
