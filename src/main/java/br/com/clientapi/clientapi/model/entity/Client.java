@@ -26,7 +26,7 @@ public class Client {
     @Column(name = "cpf_client", nullable = false, length = 11)
     private String cpfClient;
 
-    @Column(name = "date_register_client", nullable = false)
+    @Column(name = "date_register_client", nullable = false, updatable = false)
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dateRegisterClient;
 
