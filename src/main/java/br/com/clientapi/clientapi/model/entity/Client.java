@@ -1,14 +1,18 @@
 package br.com.clientapi.clientapi.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
 @Data
-@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Client {
 
     @Id
@@ -23,6 +27,7 @@ public class Client {
     private String cpfClient;
 
     @Column(name = "date_register_client", nullable = false)
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dateRegisterClient;
 
     @PrePersist
