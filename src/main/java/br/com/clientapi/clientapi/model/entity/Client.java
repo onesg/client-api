@@ -37,7 +37,7 @@ public class Client {
     private LocalDate dateRegisterClient;
 
     @PrePersist
-    public void prePersist(){
+    public void prePersist() {
         this.setDateRegisterClient(LocalDate.now());
     }
 
